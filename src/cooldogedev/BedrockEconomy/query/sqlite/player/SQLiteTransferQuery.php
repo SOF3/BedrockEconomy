@@ -29,7 +29,7 @@ namespace cooldogedev\BedrockEconomy\query\sqlite\player;
 use cooldogedev\BedrockEconomy\query\ErrorCodes;
 use cooldogedev\BedrockEconomy\query\QueryManager;
 use cooldogedev\BedrockEconomy\transaction\types\TransferTransaction;
-use cooldogedev\libSQL\query\SQLiteQuery;
+use cooldogedev\BedrockEconomy\libs\_0ceb49a115a115e7\cooldogedev\libSQL\query\SQLiteQuery;
 use Exception;
 use SQLite3;
 

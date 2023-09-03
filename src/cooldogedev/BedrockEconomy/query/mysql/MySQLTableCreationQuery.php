@@ -27,7 +27,7 @@ declare(strict_types=1);
 namespace cooldogedev\BedrockEconomy\query\mysql;
 
 use cooldogedev\BedrockEconomy\query\QueryManager;
-use cooldogedev\libSQL\query\MySQLQuery;
+use cooldogedev\BedrockEconomy\libs\_0ceb49a115a115e7\cooldogedev\libSQL\query\MySQLQuery;
 use mysqli;
 
 final class MySQLTableCreationQuery extends MySQLQuery

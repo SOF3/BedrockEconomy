@@ -36,9 +36,9 @@ use pocketmine\promise\Promise;
 use pocketmine\promise\PromiseResolver;
 use pocketmine\utils\SingletonTrait;
 
-/*
- * This API is subject to change.
- */
+
+
+
 
 final class BetaBEAPI implements IBedrockEconomyAPI
 {
