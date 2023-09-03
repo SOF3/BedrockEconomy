@@ -27,7 +27,7 @@ declare(strict_types=1);
 namespace cooldogedev\BedrockEconomy\query\sqlite;
 
 use cooldogedev\BedrockEconomy\query\QueryManager;
-use cooldogedev\BedrockEconomy\libs\_0ceb49a115a115e7\cooldogedev\libSQL\query\SQLiteQuery;
+use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\cooldogedev\libSQL\query\SQLiteQuery;
 use SQLite3;
 
 final class SQLiteTableCreationQuery extends SQLiteQuery

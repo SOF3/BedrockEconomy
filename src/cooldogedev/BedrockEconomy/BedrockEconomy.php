@@ -43,8 +43,8 @@ use cooldogedev\BedrockEconomy\language\LanguageManager;
 use cooldogedev\BedrockEconomy\listener\PlayerListener;
 use cooldogedev\BedrockEconomy\query\QueryManager;
 use cooldogedev\BedrockEconomy\transaction\TransactionManager;
-use cooldogedev\BedrockEconomy\libs\_0ceb49a115a115e7\cooldogedev\libSQL\ConnectionPool;
-use CortexPE\Commando\PacketHooker;
+use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\cooldogedev\libSQL\ConnectionPool;
+use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\PacketHooker;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\SingletonTrait;
 use pocketmine\utils\TextFormat;
@@ -91,7 +91,7 @@ final class BedrockEconomy extends PluginBase
 
     protected function onLoad(): void
     {
-        class_alias(ClosureContext::class, \cooldogedev\BedrockEconomy\libs\_0ceb49a115a115e7\cooldogedev\libSQL\context\ClosureContext::class);
+        class_alias(ClosureContext::class, \cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\cooldogedev\libSQL\context\ClosureContext::class);
 
         foreach ($this->getResources() as $resource) {
             $this->saveResource($resource->getFilename());

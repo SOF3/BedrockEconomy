@@ -34,7 +34,7 @@ use cooldogedev\BedrockEconomy\event\account\AccountDeletionEvent;
 use cooldogedev\BedrockEconomy\query\QueryManager;
 use cooldogedev\BedrockEconomy\transaction\types\TransferTransaction;
 use cooldogedev\BedrockEconomy\transaction\types\UpdateTransaction;
-use cooldogedev\BedrockEconomy\libs\_0ceb49a115a115e7\cooldogedev\libSQL\exception\SQLException;
+use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\cooldogedev\libSQL\exception\SQLException;
 
 final class AccountManager extends BedrockEconomyOwned
 {

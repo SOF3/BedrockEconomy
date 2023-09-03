@@ -42,7 +42,7 @@ use cooldogedev\BedrockEconomy\query\sqlite\player\SQLiteUpdateQuery;
 use cooldogedev\BedrockEconomy\query\sqlite\SQLiteTableCreationQuery;
 use cooldogedev\BedrockEconomy\transaction\types\TransferTransaction;
 use cooldogedev\BedrockEconomy\transaction\types\UpdateTransaction;
-use cooldogedev\BedrockEconomy\libs\_0ceb49a115a115e7\cooldogedev\libSQL\query\SQLQuery;
+use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\cooldogedev\libSQL\query\SQLQuery;
 
 final class QueryManager
 {
