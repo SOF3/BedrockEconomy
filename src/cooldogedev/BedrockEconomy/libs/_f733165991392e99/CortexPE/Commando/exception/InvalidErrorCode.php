@@ -27,25 +27,9 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\args;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\exception;
 
-use pocketmine\command\CommandSender;
-use pocketmine\network\mcpe\protocol\AvailableCommandsPacket;
 
-class RawStringArgument extends BaseArgument {
-	public function getNetworkType(): int {
-		return AvailableCommandsPacket::ARG_TYPE_STRING;
-	}
+class InvalidErrorCode extends CommandoException {
 
-	public function getTypeName(): string {
-		return "string";
-	}
-
-	public function canParse(string $testString, CommandSender $sender): bool {
-		return true;
-	}
-
-	public function parse(string $argument, CommandSender $sender) : string{
-		return $argument;
-	}
 }

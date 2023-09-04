@@ -27,7 +27,7 @@ declare(strict_types=1);
 namespace cooldogedev\BedrockEconomy\query\sqlite\player;
 
 use cooldogedev\BedrockEconomy\query\QueryManager;
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\cooldogedev\libSQL\query\SQLiteQuery;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\cooldogedev\libSQL\query\SQLiteQuery;
 use SQLite3;
 
 final class SQLiteBulkRetrieveQuery extends SQLiteQuery

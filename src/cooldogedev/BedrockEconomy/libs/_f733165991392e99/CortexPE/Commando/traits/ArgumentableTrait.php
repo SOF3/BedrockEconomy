@@ -27,13 +27,13 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\traits;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\traits;
 
 
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\args\BaseArgument;
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\args\TextArgument;
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\BaseCommand;
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\exception\ArgumentOrderException;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\args\BaseArgument;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\args\TextArgument;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\BaseCommand;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\exception\ArgumentOrderException;
 use pocketmine\command\CommandSender;
 use function array_slice;
 use function count;

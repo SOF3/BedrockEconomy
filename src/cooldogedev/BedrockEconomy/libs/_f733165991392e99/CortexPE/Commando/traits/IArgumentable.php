@@ -27,27 +27,20 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\args;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\traits;
 
 
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\args\BaseArgument;
 use pocketmine\command\CommandSender;
-use pocketmine\network\mcpe\protocol\AvailableCommandsPacket;
-use function preg_match;
 
-class IntegerArgument extends BaseArgument {
-	public function getNetworkType(): int {
-		return AvailableCommandsPacket::ARG_TYPE_INT;
-	}
+interface IArgumentable {
+	public function generateUsageMessage(): string;
+	public function hasArguments(): bool;
 
-	public function getTypeName(): string {
-		return "int";
-	}
-
-	public function canParse(string $testString, CommandSender $sender): bool {
-		return (bool)preg_match("/^-?(?:\d+)$/", $testString);
-	}
-
-	public function parse(string $argument, CommandSender $sender) : int{
-		return (int) $argument;
-	}
+	/**
+	 * @return BaseArgument[][]
+	 */
+	public function getArgumentList(): array;
+	public function parseArguments(array $rawArgs, CommandSender $sender): array;
+	public function registerArgument(int $position, BaseArgument $argument): void;
 }

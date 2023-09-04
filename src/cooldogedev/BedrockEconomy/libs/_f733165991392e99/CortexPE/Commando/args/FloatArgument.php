@@ -27,25 +27,27 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\args;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\args;
 
 
 use pocketmine\command\CommandSender;
 use pocketmine\network\mcpe\protocol\AvailableCommandsPacket;
+use function preg_match;
 
-class TextArgument extends RawStringArgument {
+class FloatArgument extends BaseArgument {
 	public function getNetworkType(): int {
-		return AvailableCommandsPacket::ARG_TYPE_RAWTEXT;
+		return AvailableCommandsPacket::ARG_TYPE_FLOAT;
 	}
 
 	public function getTypeName(): string {
-		return "text";
+		return "decimal";
 	}
 
-	public function getSpanLength(): int {
-		return PHP_INT_MAX;
-	}
 	public function canParse(string $testString, CommandSender $sender): bool {
-		return $testString !== "";
+		return (bool)preg_match("/^-?(?:\d+|\d*\.\d+)$/", $testString);
+	}
+
+	public function parse(string $argument, CommandSender $sender) : float{
+		return (float) $argument;
 	}
 }

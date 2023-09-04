@@ -1,10 +1,10 @@
 <?php
 
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\store;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\store;
 
 
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\exception\CommandoException;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\exception\CommandoException;
 use pocketmine\network\mcpe\NetworkBroadcastUtils;
 use pocketmine\network\mcpe\protocol\ClientboundPacket;
 use pocketmine\network\mcpe\protocol\types\command\CommandEnum;

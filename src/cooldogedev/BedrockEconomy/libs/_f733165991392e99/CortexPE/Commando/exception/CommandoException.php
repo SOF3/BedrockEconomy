@@ -27,21 +27,11 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\args;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\exception;
 
 
-use pocketmine\command\CommandSender;
-use pocketmine\math\Vector3;
-use function preg_match;
+use Exception;
 
-class BlockPositionArgument extends Vector3Argument {
-	public function isValidCoordinate(string $coordinate, bool $locatable): bool {
-		return (bool)preg_match("/^(?:" . ($locatable ? "(?:~-|~\+)?" : "") . "-?\d+)" . ($locatable ? "|~" : "") . "$/", $coordinate);
-	}
+class CommandoException extends Exception {
 
-	public function parse(string $argument, CommandSender $sender) : Vector3{
-		$v = parent::parse($argument, $sender);
-
-		return $v->floor();
-	}
 }

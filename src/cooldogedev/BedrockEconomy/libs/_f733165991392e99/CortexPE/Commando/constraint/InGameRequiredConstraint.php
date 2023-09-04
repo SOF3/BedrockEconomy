@@ -27,24 +27,24 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\constraint;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\constraint;
 
 
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
 
-class ConsoleRequiredConstraint extends BaseConstraint {
+class InGameRequiredConstraint extends BaseConstraint {
 
     public function test(CommandSender $sender, string $aliasUsed, array $args): bool {
         return $this->isVisibleTo($sender);
     }
 
     public function onFailure(CommandSender $sender, string $aliasUsed, array $args): void {
-        $sender->sendMessage(TextFormat::RED . "This command must be executed from a server console."); // f*ck off grammar police
+        $sender->sendMessage(TextFormat::RED . "This command must be executed in-game."); // f*ck off grammar police
     }
 
     public function isVisibleTo(CommandSender $sender): bool {
-		return !($sender instanceof Player);
+		return $sender instanceof Player;
 	}
 }

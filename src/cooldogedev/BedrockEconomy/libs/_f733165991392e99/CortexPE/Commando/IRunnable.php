@@ -27,37 +27,36 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\constraint;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando;
 
 
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\IRunnable;
-use pocketmine\command\CommandSender;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\constraint\BaseConstraint;
 
-abstract class BaseConstraint {
-    /** @var IRunnable */
-    protected IRunnable $context;
-
-    /**
-     * BaseConstraint constructor.
-     *
-     * "Context" is required so that this new-constraint-system doesn't hinder getting command info
-     *
-     * @param IRunnable $context
-     */
-    public function __construct(IRunnable $context) {
-        $this->context = $context;
-    }
+/**
+ * Interface IRunnable
+ *
+ * An interface which is declares the minimum required information
+ * to get background information for a command and/or a sub-command
+ *
+ * @package CortexPE\Commando
+ */
+interface IRunnable {
+    public function getName(): string;
 
     /**
-     * @return IRunnable
+     * @return string[]
      */
-    public function getContext(): IRunnable {
-        return $this->context;
-    }
+    public function getAliases(): array;
 
-    abstract public function test(CommandSender $sender, string $aliasUsed, array $args): bool;
+    public function getUsageMessage():string;
 
-    abstract public function onFailure(CommandSender $sender, string $aliasUsed, array $args): void;
+    /**
+     * @return string[]
+     */
+    public function getPermissions(): array; // f*ck. PM didn't declare a return type... reeee
 
-    abstract public function isVisibleTo(CommandSender $sender): bool;
+    /**
+     * @return BaseConstraint[]
+     */
+    public function getConstraints():array;
 }

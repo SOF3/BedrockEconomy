@@ -27,20 +27,21 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\traits;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\args;
 
 
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\args\BaseArgument;
 use pocketmine\command\CommandSender;
+use pocketmine\math\Vector3;
+use function preg_match;
 
-interface IArgumentable {
-	public function generateUsageMessage(): string;
-	public function hasArguments(): bool;
+class BlockPositionArgument extends Vector3Argument {
+	public function isValidCoordinate(string $coordinate, bool $locatable): bool {
+		return (bool)preg_match("/^(?:" . ($locatable ? "(?:~-|~\+)?" : "") . "-?\d+)" . ($locatable ? "|~" : "") . "$/", $coordinate);
+	}
 
-	/**
-	 * @return BaseArgument[][]
-	 */
-	public function getArgumentList(): array;
-	public function parseArguments(array $rawArgs, CommandSender $sender): array;
-	public function registerArgument(int $position, BaseArgument $argument): void;
+	public function parse(string $argument, CommandSender $sender) : Vector3{
+		$v = parent::parse($argument, $sender);
+
+		return $v->floor();
+	}
 }

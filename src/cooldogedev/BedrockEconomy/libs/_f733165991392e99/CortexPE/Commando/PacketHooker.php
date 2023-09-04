@@ -27,12 +27,12 @@
  */
 declare(strict_types=1);
 
-namespace cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando;
+namespace cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando;
 
 
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\exception\HookAlreadyRegistered;
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\store\SoftEnumStore;
-use cooldogedev\BedrockEconomy\libs\_8900c2a7afde0ab5\CortexPE\Commando\traits\IArgumentable;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\exception\HookAlreadyRegistered;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\store\SoftEnumStore;
+use cooldogedev\BedrockEconomy\libs\_f733165991392e99\CortexPE\Commando\traits\IArgumentable;
 use muqsit\simplepackethandler\SimplePacketHandler;
 use pocketmine\command\CommandSender;
 use pocketmine\event\EventPriority;
